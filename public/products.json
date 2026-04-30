@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 15,
+    "description": "Premium polarized lenses that block 100% of UV rays. Perfect for beach days and driving.",
+    "image": "https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Tropical Cotton Shirt",
+    "brand": "BreezeWear",
+    "price": 35,
+    "rating": 4.5,
+    "stock": 12,
+    "description": "Breathable 100% organic cotton shirt with vibrant tropical prints for a cool summer vibe.",
+    "image": "https://images.pexels.com/photos/2294342/pexels-photo-2294342.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "category": "Apparel"
+  },
+  {
+    "id": 3,
+    "name": "Hydrating Sunscreen SPF 50",
+    "brand": "GlowSkin",
+    "price": 18,
+    "rating": 4.9,
+    "stock": 25,
+    "description": "Non-greasy, water-resistant sunscreen with hyaluronic acid to keep your skin glowing.",
+    "image": "https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Woven Straw Beach Bag",
+    "brand": "EcoIsland",
+    "price": 42,
+    "rating": 4.6,
+    "stock": 8,
+    "description": "Handmade spacious straw bag with leather handles. Ideal for carrying all your beach essentials.",
+    "image": "https://images.pexels.com/photos/1031945/pexels-photo-1031945.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Quick-Dry Swim Trunks",
+    "brand": "AquaFlow",
+    "price": 28,
+    "rating": 4.7,
+    "stock": 20,
+    "description": "Lightweight, quick-drying fabric with a comfortable mesh lining and adjustable drawstring.",
+    "image": "https://images.pexels.com/photos/1115128/pexels-photo-1115128.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "category": "Apparel"
+  },
+  {
+    "id": 6,
+    "name": "Portable Cooling Fan",
+    "brand": "CoolMist",
+    "price": 12,
+    "rating": 4.3,
+    "stock": 30,
+    "description": "USB rechargeable mini fan with 3 speeds. Compact enough to fit in your pocket.",
+    "image": "https://images.pexels.com/photos/5443717/pexels-photo-5443717.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "category": "Electronics"
+  }
+]
