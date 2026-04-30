@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <ul className="hidden md:flex items-center gap-6 text-sm">
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/Products">Products</Link></li>
+          <li><Link href="/products">Products</Link></li>
           <li><Link href="/profile">My Profile</Link></li>
         </ul>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden flex flex-col gap-4 pb-4 text-sm">
           <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/Products" onClick={() => setIsOpen(false)}>Products</Link>
+          <Link href="/products" onClick={() => setIsOpen(false)}>Products</Link>
           <Link href="/profile" onClick={() => setIsOpen(false)}>My Profile</Link>
 
           <hr />

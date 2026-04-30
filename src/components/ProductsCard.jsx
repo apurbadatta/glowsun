@@ -1,3 +1,4 @@
+import { Button } from "@heroui/react";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
@@ -41,9 +42,9 @@ const ProductsCard = ({ product }) => {
               {product.description}
             </p>
 
-            <button className="btn bg-orange-400 text-center hover:bg-orange-600 border-none text-white w-full rounded-xl  gap-2 cursor-pointer">
+            <Button className="btn bg-orange-400 text-center hover:bg-orange-600 border-none text-white w-full rounded-xl  gap-2 cursor-pointer">
               View Details
-            </button>
+            </Button>
           </div>
         </div>
       </div>
