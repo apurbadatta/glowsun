@@ -1,4 +1,5 @@
 import { Button } from "@heroui/react";
+import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
@@ -42,9 +43,9 @@ const ProductsCard = ({ product }) => {
               {product.description}
             </p>
 
-            <Button className="btn bg-orange-400 text-center hover:bg-orange-600 border-none text-white w-full rounded-xl  gap-2 cursor-pointer">
+            <Link href={`/products/${product.id}`}><Button className="btn bg-orange-400 text-center hover:bg-orange-600 border-none text-white w-full rounded-xl  gap-2 cursor-pointer">
               View Details
-            </Button>
+            </Button></Link>
           </div>
         </div>
       </div>
