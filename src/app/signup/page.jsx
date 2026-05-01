@@ -11,8 +11,10 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
+  const router= useRouter()
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -21,12 +23,15 @@ export default function SignUpPage() {
     const password = e.target.password.value;
 
     const { data, error } = await authClient.signUp.email({
-        email, // user email address
-        password, // user password -> min 8 characters by default
-        name, // user display name
-        image, // User image URL (optional)
+        email, 
+        password, 
+        name, 
+        image, 
       
     })
+    if(!error) {
+      router.push('/')
+    }
 console.log({data,error})
     
   };
