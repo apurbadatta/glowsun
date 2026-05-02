@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ☀️ GLOWSUN - Modern E-Commerce Platform
 
-## Getting Started
+**GLOWSUN** is a modern, responsive e-commerce web application built with a focus on premium user experience, clean aesthetics, and secure authentication.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Links
+🚀 **Live Demo:** [https://glowsun.vercel.app](https://glowsun.vercel.app)  
+📂 **GitHub Repository:** [https://github.com/apurbadatta/glowsun](https://github.com/apurbadatta/glowsun)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🎯 Project Purpose
+The goal of this project is to provide a seamless and high-performance shopping interface. It features a robust authentication system, a personalized user profile management area, and a fully responsive design that adapts to any device size.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Key Features
+*   🔐 **Secure Authentication:** Integrated Email/Password login and Google Social Sign-in powered by **BetterAuth**.
+*   👤 **User Profile Management:** Users can view their information and update their name and profile picture URL.
+*   📱 **Fully Responsive:** Optimized for mobile, tablet, and desktop using a mobile-first design approach.
+*   ✨ **Modern UI/UX:** Built with **HeroUI** and **Tailwind CSS** for a professional, glassmorphic look.
+*   🔔 **Interactive Feedback:** Real-time success and error notifications using **React Toastify**.
+*   🎨 **Engagement:** High-quality SVG animations implemented with **Lottie-react**.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack & NPM Packages Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Core Frameworks
+*   **Next.js:** (React Framework)
+*   **Tailwind CSS:** (Utility-first Styling)
 
-## Deploy on Vercel
+### Authentication
+*   **Better-Auth:** (Complete Authentication Solution)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### UI Components & Icons
+*   **@heroui/react:** (Premium UI Component Library)
+*   **React-Icons:** (General Icons)
+*   **@gravity-ui/icons:** (Additional Design Icons)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Animation & Notifications
+*   **Lottie-react:** (SVG-based animations)
+*   **React-Toastify:** (Elegant toast notifications)
+
+---
+
+## 🚀 Local Setup & Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/apurbadatta/glowsun.git](https://github.com/apurbadatta/glowsun.git)
