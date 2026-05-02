@@ -29,10 +29,11 @@ export default function SignInPage() {
     console.log({ data, error });
   };
 
-  const handleGoogleSignIn = async () => { 
+  const handleGoogleSignIn = async () => {
     await authClient.signIn.social({
-    provider: "google",
-  })};
+      provider: "google",
+    });
+  };
 
   return (
     <Card className="border mx-auto w-125 my-8 py-10 mt-5">
