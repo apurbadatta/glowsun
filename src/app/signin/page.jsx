@@ -107,7 +107,7 @@ export default function SignInPage() {
         Continue with Google
       </Button>
       <p className="text-center text-sm text-slate-500 mt-8">
-        Don't have an account?
+        Do not have an account?
         <Link
           href="/signup"
           className="text-orange-500 font-bold hover:underline"

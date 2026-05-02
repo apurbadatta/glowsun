@@ -11,10 +11,12 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FaGoogle } from "react-icons/fa";
 
 export default function SignUpPage() {
-  const router= useRouter()
+  const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -23,18 +25,21 @@ export default function SignUpPage() {
     const password = e.target.password.value;
 
     const { data, error } = await authClient.signUp.email({
-        email, 
-        password, 
-        name, 
-        image, 
-      
-    })
-    if(!error) {
-      router.push('/')
+      email,
+      password,
+      name,
+      image,
+    });
+    if (!error) {
+      router.push("/");
     }
-console.log({data,error})
-    
+    console.log({ data, error });
   };
+  const handleGoogleSignIn = async () => { 
+      await authClient.signIn.social({
+      provider: "google",
+    })};
+  
 
   return (
     <Card className="border mx-auto w-125 my-8 py-10 mt-5">
@@ -86,6 +91,7 @@ console.log({data,error})
               return "Password must contain at least one number";
             }
 
+
             return null;
           }}
         >
@@ -107,6 +113,19 @@ console.log({data,error})
           </Button>
         </div>
       </Form>
+      <div className="flex items-center my-8 gap-4">
+        <div className="h-[1px] flex-1 bg-slate-200"></div>
+        <span className="text-slate-400 text-sm font-medium">OR</span>
+        <div className="h-[1px] flex-1 bg-slate-200"></div>
+      </div>
+      <Button
+        onClick={handleGoogleSignIn}
+        variant="bordered"
+        className="h-12 w-full rounded-xl border-slate-200 font-bold text-slate-700 hover:bg-slate-100 flex items-center justify-center gap-3 transition-all"
+      >
+        <FaGoogle className="text-red-500 text-lg" />
+        Continue with Google
+      </Button>
     </Card>
   );
 }
