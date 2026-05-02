@@ -11,9 +11,10 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import Link from "next/link";
+
 import { useRouter } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -33,13 +34,12 @@ export default function SignUpPage() {
     if (!error) {
       router.push("/");
     }
-    console.log({ data, error });
 
     if (error) {
-      alert("Something went wrong!");
+      toast.error(error.message || "Something went wrong!");
     }
     if (data) {
-      alert("Sucsess sign up!");
+      toast.success("Success! You have signed up.");
     }
 
 
@@ -47,6 +47,7 @@ export default function SignUpPage() {
   const handleGoogleSignIn = async () => { 
       await authClient.signIn.social({
       provider: "google",
+      
     })};
   
 
