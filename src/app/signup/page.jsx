@@ -34,6 +34,15 @@ export default function SignUpPage() {
       router.push("/");
     }
     console.log({ data, error });
+
+    if (error) {
+      alert("Something went wrong!");
+    }
+    if (data) {
+      alert("Sucsess sign up!");
+    }
+
+
   };
   const handleGoogleSignIn = async () => { 
       await authClient.signIn.social({
