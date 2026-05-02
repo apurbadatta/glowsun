@@ -52,7 +52,7 @@ export default function SignUpPage() {
   
 
   return (
-    <Card className="border mx-auto w-125 my-8 py-10 mt-5">
+    <Card className="border mx-auto w-[90%] my-8 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>

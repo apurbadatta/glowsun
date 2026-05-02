@@ -1,6 +1,8 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import Lottie from "lottie-react";
+import loginAnimation from "@/components/Animation/Welcome.json"; // আপনার ডাউনলোড করা ফাইলটি ইমপোর্ট করুন
 import {
   Button,
   Card,
@@ -36,7 +38,12 @@ export default function SignInPage() {
   };
 
   return (
-    <Card className="border mx-auto w-125 my-8 py-10 mt-5">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-10 p-5">
+    <div className="w-full max-w-[300px] md:max-w-[450px]">
+        <Lottie animationData={loginAnimation} loop={true} />
+      </div>
+
+    <Card className="border mx-auto w-[90%] my-8 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -117,5 +124,6 @@ export default function SignInPage() {
         </Link>
       </p>
     </Card>
+    </div>
   );
 }
