@@ -121,7 +121,7 @@ const Navbar = () => {
                 <span>{user.name}</span>
               </div>
 
-              <button onClick={handleLogout} className="text-red-500">
+              <button onClick={handleLogout} className="text-red-500 cursor-pointer ">
                 Sign Out
               </button>
             </>
