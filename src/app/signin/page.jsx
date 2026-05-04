@@ -15,6 +15,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -28,7 +29,12 @@ export default function SignInPage() {
       password,
       callbackURL: "/",
     });
-    console.log({ data, error });
+    if (data) {
+      toast.success("Success! You have signed up.");
+    }
+    if (error) {
+      toast.error(error.message || "Something went wrong! Please try again");
+    }
   };
 
   const handleGoogleSignIn = async () => {
