@@ -32,7 +32,8 @@ export default function SignUpPage() {
       image,
     });
     if (!error) {
-      router.push("/");
+      await authClient.signOut();
+      router.push("/signin");
     }
 
     if (error) {
@@ -41,15 +42,12 @@ export default function SignUpPage() {
     if (data) {
       toast.success("Success! You have signed up.");
     }
-
-
   };
-  const handleGoogleSignIn = async () => { 
-      await authClient.signIn.social({
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
       provider: "google",
-      
-    })};
-  
+    });
+  };
 
   return (
     <Card className="border mx-auto w-[90%] my-8 py-10 mt-5">
@@ -100,7 +98,6 @@ export default function SignUpPage() {
             if (!/[0-9]/.test(value)) {
               return "Password must contain at least one number";
             }
-
 
             return null;
           }}

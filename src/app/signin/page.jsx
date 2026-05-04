@@ -39,91 +39,91 @@ export default function SignInPage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-10 p-5">
-    <div className="w-full max-w-[300px] md:max-w-[450px]">
+      <div className="w-full max-w-[300px] md:max-w-[450px]">
         <Lottie animationData={loginAnimation} loop={true} />
       </div>
 
-    <Card className="border mx-auto w-[90%] my-8 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Sign In</h1>
+      <Card className="border mx-auto w-[90%] my-8 py-10 mt-5">
+        <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
-        <TextField
-          isRequired
-          name="email"
-          type="email"
-          validate={(value) => {
-            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-              return "Please enter a valid email address";
-            }
+        <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+          <TextField
+            isRequired
+            name="email"
+            type="email"
+            validate={(value) => {
+              if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+                return "Please enter a valid email address";
+              }
 
-            return null;
-          }}
-        >
-          <Label>Email</Label>
-          <Input placeholder="john@example.com" />
-          <FieldError />
-        </TextField>
+              return null;
+            }}
+          >
+            <Label>Email</Label>
+            <Input placeholder="john@example.com" />
+            <FieldError />
+          </TextField>
 
-        <TextField
-          isRequired
-          minLength={8}
-          name="password"
-          type="password"
-          validate={(value) => {
-            if (value.length < 8) {
-              return "Password must be at least 8 characters";
-            }
-            if (!/[A-Z]/.test(value)) {
-              return "Password must contain at least one uppercase letter";
-            }
-            if (!/[0-9]/.test(value)) {
-              return "Password must contain at least one number";
-            }
+          <TextField
+            isRequired
+            minLength={8}
+            name="password"
+            type="password"
+            validate={(value) => {
+              if (value.length < 8) {
+                return "Password must be at least 8 characters";
+              }
+              if (!/[A-Z]/.test(value)) {
+                return "Password must contain at least one uppercase letter";
+              }
+              if (!/[0-9]/.test(value)) {
+                return "Password must contain at least one number";
+              }
 
-            return null;
-          }}
-        >
-          <Label>Password</Label>
-          <Input placeholder="Enter your password" />
-          <Description>
-            Must be at least 8 characters with 1 uppercase and 1 number
-          </Description>
-          <FieldError />
-        </TextField>
+              return null;
+            }}
+          >
+            <Label>Password</Label>
+            <Input placeholder="Enter your password" />
+            <Description>
+              Must be at least 8 characters with 1 uppercase and 1 number
+            </Description>
+            <FieldError />
+          </TextField>
 
-        <div className="flex gap-2">
-          <Button type="submit">
-            <Check />
-            Submit
-          </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
+          <div className="flex gap-2">
+            <Button type="submit">
+              <Check />
+              Submit
+            </Button>
+            <Button type="reset" variant="secondary">
+              Reset
+            </Button>
+          </div>
+        </Form>
+        <div className="flex items-center my-8 gap-4">
+          <div className="h-[1px] flex-1 bg-slate-200"></div>
+          <span className="text-slate-400 text-sm font-medium">OR</span>
+          <div className="h-[1px] flex-1 bg-slate-200"></div>
         </div>
-      </Form>
-      <div className="flex items-center my-8 gap-4">
-        <div className="h-[1px] flex-1 bg-slate-200"></div>
-        <span className="text-slate-400 text-sm font-medium">OR</span>
-        <div className="h-[1px] flex-1 bg-slate-200"></div>
-      </div>
-      <Button
-        onClick={handleGoogleSignIn}
-        variant="bordered"
-        className="h-12 w-full rounded-xl border-slate-200 font-bold text-slate-700 hover:bg-slate-100 flex items-center justify-center gap-3 transition-all"
-      >
-        <FaGoogle className="text-red-500 text-lg" />
-        Continue with Google
-      </Button>
-      <p className="text-center text-sm text-slate-500 mt-8">
-        Do not have an account?
-        <Link
-          href="/signup"
-          className="text-orange-500 font-bold hover:underline"
+        <Button
+          onClick={handleGoogleSignIn}
+          variant="bordered"
+          className="h-12 w-full rounded-xl border-slate-200 font-bold text-slate-700 hover:bg-slate-100 flex items-center justify-center gap-3 transition-all"
         >
-          Create one
-        </Link>
-      </p>
-    </Card>
+          <FaGoogle className="text-red-500 text-lg" />
+          Continue with Google
+        </Button>
+        <p className="text-center text-sm text-slate-500 mt-8">
+          Do not have an account?
+          <Link
+            href="/signup"
+            className="text-orange-500 font-bold hover:underline"
+          >
+            Create one
+          </Link>
+        </p>
+      </Card>
     </div>
   );
 }
